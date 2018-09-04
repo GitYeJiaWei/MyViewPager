@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.yjw.Fragment.frag1.FragmentActivity">
+
+        <!--展示内容界面  -->
+        <LinearLayout
+            android:id="@+id/content_layout"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </LinearLayout>
+
+        <!-- 展示切换标签 -->
+        <LinearLayout
+            android:id="@+id/layout_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="#ffffff"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true">
+
+            <RadioGroup
+                android:id="@+id/rg_home"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                >
+
+                <RadioButton
+                    android:id="@+id/rb_shopshop"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:button="@null"
+                    android:drawableTop="@mipmap/ker"
+                    android:drawablePadding="10dp"
+                    android:gravity="center"
+                    android:text="商店"
+                    android:textColor="#B3B3B3"
+                    android:textSize="16sp"/>
+
+                <RadioButton
+                    android:id="@+id/rb_shopshare"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:button="@null"
+                    android:drawableTop="@mipmap/ker"
+                    android:drawablePadding="10dp"
+                    android:gravity="center"
+                    android:text="店铺"
+                    android:textColor="#B3B3B3"
+                    android:textSize="16sp"/>
+
+                <RadioButton
+                    android:id="@+id/rb_shopgift"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:button="@null"
+                    android:drawableTop="@mipmap/ker"
+                    android:drawablePadding="10dp"
+                    android:gravity="center"
+                    android:text="商场"
+                    android:textColor="#B3B3B3"
+                    android:textSize="16sp"/>
+
+                <RadioButton
+                    android:id="@+id/rb_shopdan"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:button="@null"
+                    android:drawableTop="@mipmap/ker"
+                    android:drawablePadding="10dp"
+                    android:gravity="center"
+                    android:text="小店"
+                    android:textColor="#B3B3B3"
+                    android:textSize="16sp"/>
+            </RadioGroup>
+        </LinearLayout>
+    </RelativeLayout>
+

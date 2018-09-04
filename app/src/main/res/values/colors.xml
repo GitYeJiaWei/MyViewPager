@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="yellow">#f7f4f904</color>
+    <color name="topbg">#336699</color>
+    <color name="txt_color_gray">#666666</color>
+
+    <color name="txt_color_subgray">#888888</color>
+    <color name="black">#000000</color>
+    <color name="gray">#f7f7f7</color>
+    <color name="red">#FF0000</color>
+    <color name="green">#0bc337</color>
+    <color name="G2">#32bb6f</color>
+    <color name="G22">#29d977</color>
+
+    <color name="possible_result_points">#c0ffbd21</color> <!-- Android standard ICS color -->
+    <color name="result_minor_text">#ffc0c0c0</color>
+    <color name="result_points">#c099cc00</color> <!-- Android standard ICS color -->
+    <color name="result_text">#ffffffff</color>
+    <color name="result_view">#b0000000</color>
+    <color name="status_text">#ffffffff</color>
+    <color name="transparent">#00000000</color>
+    <color name="viewfinder_laser">#ffcc0000</color> <!-- Android standard ICS color -->
+    <color name="viewfinder_mask">#60000000</color>
+
+    <color name="title_bar_color">#336699</color>
+    <color name="blue_back">#ea3f87c2</color>
+    <color name="blue">#f74f94cd</color>
+    <color name="white">#ffffff</color>
+    <color name="blue_left">#6699CC</color>
+    <color name="blue_right">#99CCFF</color>
+    <color name="blue_top">#2196F3</color>
+</resources>

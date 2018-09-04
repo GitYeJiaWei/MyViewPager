@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txt_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="hehe"
+        android:textColor="@color/yellow"
+        android:textSize="20sp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入东西"
+        android:maxLines="2"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <Button
+                android:id="@+id/btn_intent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@color/colorAccent"
+                android:text="跳转下一个界面" />
+
+            <Button
+                android:id="@+id/btn_url"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跳转网页"
+                android:background="@color/colorAccent"/>
+            <Button
+                android:id="@+id/btn_intent1"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跳转第二个界面"
+                android:background="@color/colorAccent"/>
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btn_progress"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="进度条开关"
+                android:background="@color/colorAccent"/>
+
+            <Button
+                android:id="@+id/btn_dialog1"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="自定义对话框1"
+                android:background="@color/colorAccent"/>
+
+            <Button
+                android:id="@+id/btn_dialog2"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="自定义对话框2"
+                android:background="@color/colorAccent"/>
+
+
+            <Button
+                android:id="@+id/btn_fragment"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跳转到fragment"
+                android:textAllCaps="false"
+                android:background="@color/colorAccent"/>
+
+            <Button
+                android:id="@+id/btn_serializable"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跳转到serializable"
+                android:textAllCaps="false"
+                android:background="@color/colorAccent"/>
+
+            <Button
+                android:id="@+id/btn_frag1"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跳转到fragment1"
+                android:textAllCaps="false"
+                android:background="@color/colorAccent"
+                />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

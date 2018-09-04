@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="com.example.yjw.JsonObject.JsonActivity">
+
+    <EditText
+        android:id="@+id/text_invid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="FFD1807270001"/>
+
+    <Button
+        android:id="@+id/btn_invid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="提交"/>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="上传"/>
+
+    <Button
+        android:id="@+id/btn_get"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="接受"/>
+
+    <Button
+        android:id="@+id/ip_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="更改ip"/>
+</LinearLayout>

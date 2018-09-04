@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.yjw.myviewpager.FirstActivity"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.example.yjw.myviewpager.TitleLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+
+    </com.example.yjw.myviewpager.TitleLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <Button
+                android:id="@+id/tv_HandlerThreadActivity"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跳转到HandlerThread"
+                android:background="@color/colorAccent"/>
+            <Button
+                android:id="@+id/btn_AsyncTask"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跳转到AsyncTask"
+                android:background="@color/colorAccent"/>
+            <Button
+                android:id="@+id/btn_Glide"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跳转到Glide图片加载"
+                android:background="@color/colorAccent"/>
+            <Button
+                android:id="@+id/btn_ClotheStore"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跳转到ClotheStore"
+                android:background="@color/colorAccent"/>
+            <Button
+                android:id="@+id/btn_Queue"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跳转到Queue队列"
+                android:background="@color/colorAccent"/>
+
+            <Button
+                android:id="@+id/btn_ThreadPool"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跳转到ThreadPool线程池"
+                android:background="@color/colorAccent"/>
+            <Button
+                android:id="@+id/btn_JsonActivity"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跳转到Json数据泛型解析"
+                android:background="@color/colorAccent"/>
+
+            <Button
+                android:id="@+id/btn_OnTouchEvent"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跳转到Button的事件分发机制"
+                android:background="@color/colorAccent"/>
+
+            <Button
+                android:id="@+id/btn_OnRefreshActivity"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跳转到listview固定刷新"
+                android:background="@color/colorAccent"/>
+
+            <Button
+                android:id="@+id/btn_WViewActivity"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跳转到广告轮播"
+                android:background="@color/colorAccent"/>
+
+            <Button
+                android:id="@+id/btn_AddViewActivity"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跳转到动态添加组件"
+                android:background="@color/colorAccent"/>
+
+            <Button
+                android:id="@+id/btn_Main2Activity"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跳转到Main2Activity"
+                android:background="@color/colorAccent"/>
+
+            <Button
+                android:id="@+id/btn_MessageActivity"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跳转到轮询"
+                android:background="@color/colorAccent"/>
+
+            <Button
+                android:id="@+id/btn_ViewPageActivity"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跳转到广告图"
+                android:background="@color/colorAccent"/>
+
+            <Button
+                android:id="@+id/btn_CombinedActivity"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跳转折线图"
+                android:background="@color/colorAccent"/>
+
+            <Button
+                android:id="@+id/btn_PreisterActivity"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跳转注册界面"
+                android:background="@color/colorAccent"/>
+
+            <Button
+                android:id="@+id/btn_MAPAndroidChar"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跳转柱状图"
+                android:background="@color/colorAccent"/>
+
+            <Button
+                android:id="@+id/btn_Retrofit"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跳转Retrofit"
+                android:background="@color/colorAccent"/>
+
+            <Button
+                android:id="@+id/btn_BaseDialog"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跳转收货Dialog"
+                android:background="@color/colorAccent"/>
+
+            <Button
+                android:id="@+id/btn_BaseMaterial"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跳转BaseMaterial"
+                android:background="@color/colorAccent"/>
+
+            <Button
+                android:id="@+id/btn_ACache"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跳转ACache"
+                android:background="@color/colorAccent"/>
+
+            <Button
+                android:id="@+id/btn_http"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跳转网页"
+                android:background="@color/colorAccent"/>
+
+            <Button
+                android:id="@+id/btn_pictureup"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跳转到拍照获取图片"
+                android:background="@color/colorAccent"/>
+
+            <Button
+                android:id="@+id/btn_chose"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跳转到选择相册"
+                android:background="@color/colorAccent"/>
+
+            <Button
+                android:id="@+id/btn_webview"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跳转到webview"
+                android:background="@color/colorAccent"/>
+
+            <Button
+                android:id="@+id/btn_okhttp"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跳转到okhttp"
+                android:background="@color/colorAccent"/>
+
+            <Button
+                android:id="@+id/btn_back"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跳回上一个界面"
+                android:background="@color/colorAccent"/>
+
+            <Button
+                android:id="@+id/btn_frame"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跳转到百分比布局"
+                android:background="@color/colorAccent"/>
+
+            <Button
+                android:id="@+id/btn_broadcast"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跳转到广播"
+                android:background="@color/colorAccent"/>
+
+            <Button
+                android:id="@+id/btn_mybroadcast"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跳转到发送标准广播"
+                android:background="@color/colorAccent"/>
+
+            <Button
+                android:id="@+id/btn_mybroadlocalcast"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跳转到发送本地广播"
+                android:background="@color/colorAccent"/>
+            <Button
+                android:id="@+id/btn_tiao"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跳转到其他APP"
+                android:background="@color/colorAccent"/>
+            <Button
+                android:id="@+id/btn_yipin"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跳转到音频播放"
+                android:background="@color/colorAccent"/>
+            <Button
+                android:id="@+id/btn_shipin"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跳转到视频播放"
+                android:background="@color/colorAccent"/>
+
+            <Button
+                android:id="@+id/btn_handler"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跳转到异步消息处理机制"
+                android:background="@color/colorAccent"/>
+
+            <Button
+                android:id="@+id/btn_myservice"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跳转到服务"
+                android:background="@color/colorAccent"/>
+
+            <Button
+                android:id="@+id/btn_Drawerlayout"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跳转到滑动菜单"
+                android:background="@color/colorAccent"/>
+
+            <Button
+                android:id="@+id/btn_BackLogin"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跳转到强制退出"
+                android:background="@color/colorAccent"/>
+
+            <Button
+                android:id="@+id/BaiduTTS"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跳转到百度语音"
+                android:background="@color/colorAccent"/>
+
+            <Button
+                android:id="@+id/BaiduTTS1"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跳转到百度语音1"
+                android:background="@color/colorAccent"/>
+
+            <Button
+                android:id="@+id/Zxing"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跳转到扫描二维码"
+                android:background="@color/colorAccent"/>
+
+            <Button
+                android:id="@+id/DatePickerDialog"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跳转到日期对话框"
+                android:background="@color/colorAccent"/>
+
+            <Button
+                android:id="@+id/MyInterface"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跳转到接口回调"
+                android:background="@color/colorAccent"/>
+
+            <Button
+                android:id="@+id/HorizontalScrollViewActivity"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跳转到横向滚动listview"
+                android:background="@color/colorAccent"/>
+
+            <Button
+                android:id="@+id/Dagger"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跳转到dagger"
+                android:background="@color/colorAccent"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

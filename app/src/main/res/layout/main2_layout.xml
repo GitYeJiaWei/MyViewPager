@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin10"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_marginTop="@dimen/margin5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="上链数据："
+            android:textColor="@color/green"
+            android:textSize="@dimen/name2"/>
+
+        <TextView
+            android:id="@+id/tv_adress"
+            android:layout_marginTop="@dimen/margin5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Address：厦门集美软件元3期"
+            android:textColor="@color/white"
+            android:textSize="@dimen/name2"/>
+        <TextView
+            android:id="@+id/tv_user"
+            android:layout_marginTop="@dimen/margin5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User：Admin"
+            android:textColor="@color/white"
+            android:textSize="@dimen/name2"/>
+        <TextView
+            android:id="@+id/tv_event"
+            android:layout_marginTop="@dimen/margin5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Event：测试上传002"
+            android:textColor="@color/white"
+            android:textSize="@dimen/name2"/>
+        <TextView
+            android:id="@+id/tv_remark"
+            android:layout_marginTop="@dimen/margin5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remark：remark"
+            android:textColor="@color/white"
+            android:textSize="@dimen/name2"/>
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_marginTop="@dimen/margin5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time：2018-06-27T09:50:31.374+08:00"
+            android:textColor="@color/white"
+            android:textSize="@dimen/name2"/>
+
+        <TextView
+            android:layout_marginTop="@dimen/margin5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="区块链信息反馈："
+            android:textColor="@color/green"
+            android:textSize="@dimen/name2"/>
+
+        <TextView
+            android:id="@+id/tv_message"
+            android:layout_marginTop="@dimen/margin5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Message："
+            android:textColor="@color/white"
+            android:textSize="@dimen/name2"/>
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_marginTop="@dimen/margin5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Status："
+            android:textColor="@color/white"
+            android:textSize="@dimen/name2"/>
+
+        <TextView
+            android:id="@+id/tv_tx_id"
+            android:layout_marginTop="@dimen/margin5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hash_id："
+            android:textColor="@color/white"
+            android:textSize="@dimen/name2"/>
+
+        <TextView
+            android:id="@+id/tv_nonce"
+            android:layout_marginTop="@dimen/margin5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nonce："
+            android:textColor="@color/white"
+            android:textSize="@dimen/name2"/>
+
+        <TextView
+            android:id="@+id/tv_timestamp"
+            android:layout_marginTop="@dimen/margin5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Timestamp："
+            android:textColor="@color/white"
+            android:textSize="@dimen/name2"/>
+
+        <TextView
+            android:id="@+id/tv_sign"
+            android:layout_marginTop="@dimen/margin5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign："
+            android:textColor="@color/white"
+            android:textSize="@dimen/name2"/>
+
+
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/white" />
+</LinearLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:background="@drawable/colth_back"
+    android:weightSum="5"
+    android:orientation="horizontal">
+
+    <ImageButton
+        android:id="@+id/title_back"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:src="@mipmap/tmpiot"
+        android:gravity="center"
+        android:background="@drawable/colth_left"
+        android:textColor="@color/white"
+        />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="智能收银集美软件店   41454545"
+        android:textColor="@color/white"
+        android:layout_weight="3"
+        android:textSize="20dp"
+        android:layout_gravity="center"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/title_edit"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:layout_margin="15dp"
+        android:layout_gravity="center"
+        android:textSize="30dp"
+        android:background="@drawable/colth_right"
+        android:text="返回购物区"
+        android:textColor="@color/blue"
+        />
+</LinearLayout>

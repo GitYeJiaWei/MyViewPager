@@ -34,7 +34,7 @@ public class GlideActivity extends BaseActivity {
 
     public void loadImage(View view) {
         String url1 ="http://p1.pstatp.com/large/166200019850062839d3";                             //GIF图 Glide自动识别图片类型
-        //String url  ="http://cn.bing.com/az/hprichbg/rb/Dongdaemun_ZH-CN10736487148_1920x1080.jpg"; //静态图
+        //////String url  ="http://cn.bing.com/az/hprichbg/rb/Dongdaemun_ZH-CN10736487148_1920x1080.jpg"; //静态图
         Glide.with(this)                            //创建图片加载实例
                 .load(url1)                                  //指定待加载的图片资源
                 //.asBitmap()                                 //取GIF图的第一帧

@@ -8,10 +8,9 @@ import java.util.TimerTask;
 public class Timers {
     private Timer timer;
     private TimerTask timerTask;
-    
+
+    //开始时调用
     private void starttime(){
-        SimpleDateFormat format =new SimpleDateFormat("yyyy-MM-dd HH-mm-ss");
-        Date date =new Date();
         if (timer==null){
             timer =new Timer();
         }
@@ -19,6 +18,8 @@ public class Timers {
             timerTask =new TimerTask() {
                 @Override
                 public void run() {
+                    SimpleDateFormat format =new SimpleDateFormat("yyyy-MM-dd HH-mm-ss");
+                    Date date =new Date();
                     System.out.print(format.format(date)+"\n");
                 }
             };
@@ -26,6 +27,7 @@ public class Timers {
         timer.schedule(timerTask,0,1000);
     }
 
+    //结束时调用
     private void stoptime(){
         if (timer!=null){
             timer.cancel();

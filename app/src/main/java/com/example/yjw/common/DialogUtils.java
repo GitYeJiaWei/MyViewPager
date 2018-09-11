@@ -19,7 +19,7 @@ import com.example.yjw.myviewpager.R;
 public class DialogUtils {
     public static void ShowToast(final Context c, String msg)
     {
-        Toast toast = Toast.makeText(c, msg, Toast.LENGTH_LONG);
+        Toast toast = Toast.makeText(c, msg, Toast.LENGTH_SHORT);
         toast.setGravity(Gravity.CENTER, 0, 0);
         toast.show();
     }

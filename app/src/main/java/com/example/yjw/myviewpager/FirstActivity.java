@@ -30,6 +30,8 @@ import com.example.yjw.MaterialDesign.DrawerLayoutActivity;
 import com.example.yjw.OnRefreshList.OnRefreshActivity;
 import com.example.yjw.OnTouchEvent.OnTouchEvent;
 import com.example.yjw.Retrofit.DataServiceActivity;
+import com.example.yjw.Socket.Socket2Activity;
+import com.example.yjw.Socket.SocketActivity;
 import com.example.yjw.ThreadPoolExecutor.Queue;
 import com.example.yjw.ThreadPoolExecutor.ThreadPool;
 import com.example.yjw.UFH.Main2Activity;
@@ -146,7 +148,10 @@ public class FirstActivity extends BaseActivity {
     Button btnAsyncTask;
     @BindView(R.id.tv_HandlerThreadActivity)
     Button tvHandlerThreadActivity;
-
+    @BindView(R.id.tv_SocketActivity)
+    Button tvSocketActivity;
+    @BindView(R.id.tv_Socket2Activity)
+    Button tvSocket2Activity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -179,9 +184,17 @@ public class FirstActivity extends BaseActivity {
         }
     }
 
-    @OnClick({R.id.tv_HandlerThreadActivity,R.id.btn_AsyncTask, R.id.btn_Glide, R.id.btn_ClotheStore, R.id.btn_Queue, R.id.btn_ThreadPool, R.id.btn_JsonActivity, R.id.btn_OnTouchEvent, R.id.btn_OnRefreshActivity, R.id.btn_WViewActivity, R.id.btn_AddViewActivity, R.id.btn_Main2Activity, R.id.btn_MessageActivity, R.id.btn_ViewPageActivity, R.id.btn_CombinedActivity, R.id.btn_PreisterActivity, R.id.btn_MAPAndroidChar, R.id.btn_Retrofit, R.id.btn_BaseDialog, R.id.btn_BaseMaterial, R.id.btn_http, R.id.btn_pictureup, R.id.btn_chose, R.id.btn_webview, R.id.btn_okhttp, R.id.btn_back, R.id.btn_frame, R.id.btn_broadcast, R.id.btn_mybroadcast, R.id.btn_mybroadlocalcast, R.id.btn_tiao, R.id.btn_yipin, R.id.btn_shipin, R.id.btn_handler, R.id.btn_myservice, R.id.btn_Drawerlayout, R.id.btn_BackLogin, R.id.BaiduTTS, R.id.BaiduTTS1, R.id.Zxing, R.id.DatePickerDialog, R.id.MyInterface, R.id.HorizontalScrollViewActivity, R.id.Dagger, R.id.btn_ACache})
+    @OnClick({R.id.tv_Socket2Activity,R.id.tv_SocketActivity,R.id.tv_HandlerThreadActivity, R.id.btn_AsyncTask, R.id.btn_Glide, R.id.btn_ClotheStore, R.id.btn_Queue, R.id.btn_ThreadPool, R.id.btn_JsonActivity, R.id.btn_OnTouchEvent, R.id.btn_OnRefreshActivity, R.id.btn_WViewActivity, R.id.btn_AddViewActivity, R.id.btn_Main2Activity, R.id.btn_MessageActivity, R.id.btn_ViewPageActivity, R.id.btn_CombinedActivity, R.id.btn_PreisterActivity, R.id.btn_MAPAndroidChar, R.id.btn_Retrofit, R.id.btn_BaseDialog, R.id.btn_BaseMaterial, R.id.btn_http, R.id.btn_pictureup, R.id.btn_chose, R.id.btn_webview, R.id.btn_okhttp, R.id.btn_back, R.id.btn_frame, R.id.btn_broadcast, R.id.btn_mybroadcast, R.id.btn_mybroadlocalcast, R.id.btn_tiao, R.id.btn_yipin, R.id.btn_shipin, R.id.btn_handler, R.id.btn_myservice, R.id.btn_Drawerlayout, R.id.btn_BackLogin, R.id.BaiduTTS, R.id.BaiduTTS1, R.id.Zxing, R.id.DatePickerDialog, R.id.MyInterface, R.id.HorizontalScrollViewActivity, R.id.Dagger, R.id.btn_ACache})
     public void onViewClicked(View view) {
         switch (view.getId()) {
+            case R.id.tv_Socket2Activity:
+                Intent tv_Socket2Activity = new Intent(this, Socket2Activity.class);
+                startActivityForResult(tv_Socket2Activity, RAG);
+                break;
+            case R.id.tv_SocketActivity:
+                Intent tv_SocketActivity = new Intent(this, SocketActivity.class);
+                startActivityForResult(tv_SocketActivity, RAG);
+                break;
             case R.id.tv_HandlerThreadActivity:
                 Intent tv_HandlerThreadActivity = new Intent(this, HandlerThreadActivity.class);
                 startActivityForResult(tv_HandlerThreadActivity, RAG);

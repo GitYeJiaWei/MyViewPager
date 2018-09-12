@@ -21,6 +21,13 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
             <Button
+                android:id="@+id/tv_MinaActivity"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跳转到Mina通信"
+                android:background="@color/colorAccent"/>
+            <Button
                 android:id="@+id/tv_Socket2Activity"
                 android:layout_marginTop="15dp"
                 android:layout_width="wrap_content"

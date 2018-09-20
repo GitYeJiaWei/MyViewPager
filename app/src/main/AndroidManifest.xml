@@ -3,6 +3,7 @@
     package="com.example.yjw.myviewpager">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.NFC" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
@@ -472,7 +473,9 @@
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden" />
-        <activity android:name="com.example.yjw.Socket.Mini.MinaActivity"></activity>
+        <activity android:name="com.example.yjw.Socket.Mini.MinaActivity" />
+        <activity android:name="com.example.yjw.NFC.NFCActivity" />
+        <activity android:name="com.example.yjw.NFC.UUIDActivity"></activity>
     </application>
 
 </manifest>

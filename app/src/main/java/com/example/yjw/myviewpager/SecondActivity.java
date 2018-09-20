@@ -16,6 +16,7 @@ import android.widget.Toast;
 import com.example.yjw.BaiduLBS.Baidu_MainActivity;
 import com.example.yjw.BaseListView.MyListView;
 import com.example.yjw.CityList.Select_City_Activity;
+import com.example.yjw.NFC.NFCActivity;
 import com.example.yjw.StaggeredGridLagout.StaggeredGridLayoutActivity;
 import com.example.yjw.camera.CameraActivity;
 import com.example.yjw.common.ActivityCollecter;
@@ -47,6 +48,10 @@ public class SecondActivity extends BaseActivity implements View.OnClickListener
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
         dbHelper = new MyDatabaseHelper(this, "BookStore.db", null, 1);
+
+        Button btn_NFC = findViewById(R.id.btn_NFC);
+        btn_NFC.setOnClickListener(this);
+
         Button button = findViewById(R.id.btn_http);
         button.setOnClickListener(this);
 
@@ -129,6 +134,10 @@ public class SecondActivity extends BaseActivity implements View.OnClickListener
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
+            case R.id.btn_NFC:
+                Intent btn_NFC =new Intent(SecondActivity.this,NFCActivity.class);
+                startActivity(btn_NFC);
+                break;
             case R.id.btn_http:
                 //动态获取权限
                 if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {

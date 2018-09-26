@@ -1,7 +1,5 @@
 package com.example.yjw.Retrofit;
 
-import com.example.yjw.JsonObject.BaseBean;
-
 import java.util.Map;
 
 import retrofit2.Call;
@@ -39,6 +37,4 @@ public interface APIservice {
    @FormUrlEncoded
    @POST("/tools/android.ashx")
    Observable<QQDataT> QQ_DATA_CALL3(@Field("committype") String login,@Field("sjh") String Sjh,@Field("pwd") String pword);
-
-
 }

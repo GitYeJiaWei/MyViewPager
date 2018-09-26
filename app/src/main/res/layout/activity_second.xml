@@ -24,6 +24,23 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
             <Button
+                android:id="@+id/btn_PictureUpLoad2"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跳到Retrofit图片上传2"
+                android:background="@color/colorAccent"/>
+
+            <Button
+                android:id="@+id/btn_PictureUpLoad"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跳到Retrofit图片上传"
+                android:background="@color/colorAccent"/>
+
+
+            <Button
                 android:id="@+id/btn_NFC"
                 android:layout_marginTop="15dp"
                 android:layout_width="wrap_content"

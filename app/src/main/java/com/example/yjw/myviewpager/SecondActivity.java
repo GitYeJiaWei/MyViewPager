@@ -25,6 +25,8 @@ import com.example.yjw.contentResolver.ContentActivity;
 import com.example.yjw.contentResolver.ContentResolverActivity;
 import com.example.yjw.listview.ListViewActivity;
 import com.example.yjw.notification.NotificationActivity;
+import com.example.yjw.photoupload.PictureUpload;
+import com.example.yjw.photoupload.photoupload2.PictureUpload2;
 import com.example.yjw.recyclerview.RecyclerViewActivity;
 import com.example.yjw.save.FileSaveActivity;
 import com.example.yjw.save.MyDatabaseHelper;
@@ -48,6 +50,12 @@ public class SecondActivity extends BaseActivity implements View.OnClickListener
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
         dbHelper = new MyDatabaseHelper(this, "BookStore.db", null, 1);
+
+        Button btn_PictureUpLoad = findViewById(R.id.btn_PictureUpLoad);
+        btn_PictureUpLoad.setOnClickListener(this);
+
+        Button btn_PictureUpLoad2 = findViewById(R.id.btn_PictureUpLoad2);
+        btn_PictureUpLoad2.setOnClickListener(this);
 
         Button btn_NFC = findViewById(R.id.btn_NFC);
         btn_NFC.setOnClickListener(this);
@@ -134,6 +142,14 @@ public class SecondActivity extends BaseActivity implements View.OnClickListener
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
+            case R.id.btn_PictureUpLoad2:
+                Intent btn_PictureUpLoad2 =new Intent(SecondActivity.this,PictureUpload2.class);
+                startActivity(btn_PictureUpLoad2);
+                break;
+            case R.id.btn_PictureUpLoad:
+                Intent btn_PictureUpLoad =new Intent(SecondActivity.this,PictureUpload.class);
+                startActivity(btn_PictureUpLoad);
+                break;
             case R.id.btn_NFC:
                 Intent btn_NFC =new Intent(SecondActivity.this,NFCActivity.class);
                 startActivity(btn_NFC);

@@ -475,7 +475,9 @@
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity android:name="com.example.yjw.Socket.Mini.MinaActivity" />
         <activity android:name="com.example.yjw.NFC.NFCActivity" />
-        <activity android:name="com.example.yjw.NFC.UUIDActivity"></activity>
+        <activity android:name="com.example.yjw.NFC.UUIDActivity" />
+        <activity android:name="com.example.yjw.photoupload.PictureUpload" />
+        <activity android:name="com.example.yjw.photoupload.photoupload2.PictureUpload2"></activity>
     </application>
 
 </manifest>

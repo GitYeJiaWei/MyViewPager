@@ -7,13 +7,10 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
-
 import com.example.yjw.myviewpager.R;
-
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -25,6 +22,10 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
+/**
+ * Retrofit 上传图片
+ * 单张，多张，图文上传
+ */
 public class PictureUpload extends AppCompatActivity {
     String path1, path2;
     File file1, file2;
@@ -132,7 +133,6 @@ public class PictureUpload extends AppCompatActivity {
                 Toast.makeText(PictureUpload.this, t.toString(), Toast.LENGTH_SHORT).show();
             }
         });
-
     }
 
     @OnClick({R.id.myButton1, R.id.myButton2, R.id.myButton3})

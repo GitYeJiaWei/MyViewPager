@@ -22,6 +22,10 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.adapter.rxjava.Result;
 
+/**
+ * Retrofit 上传图片
+ * 图文上传
+ */
 public class PictureUpload2 extends AppCompatActivity {
     String path1, path2;
     @BindView(R.id.Buttom)

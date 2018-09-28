@@ -39,13 +39,20 @@
                 android:text="跳到Retrofit图片上传"
                 android:background="@color/colorAccent"/>
 
+            <Button
+                android:id="@+id/btn_NFCA"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跳到NFCA"
+                android:background="@color/colorAccent"/>
 
             <Button
                 android:id="@+id/btn_NFC"
                 android:layout_marginTop="15dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="跳到NFC"
+                android:text="跳到NFCV"
                 android:background="@color/colorAccent"/>
 
             <Button

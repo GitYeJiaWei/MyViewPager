@@ -17,6 +17,7 @@ import com.example.yjw.BaiduLBS.Baidu_MainActivity;
 import com.example.yjw.BaseListView.MyListView;
 import com.example.yjw.CityList.Select_City_Activity;
 import com.example.yjw.NFC.NFCActivity;
+import com.example.yjw.NFC.UUIDActivity;
 import com.example.yjw.StaggeredGridLagout.StaggeredGridLayoutActivity;
 import com.example.yjw.camera.CameraActivity;
 import com.example.yjw.common.ActivityCollecter;
@@ -59,6 +60,9 @@ public class SecondActivity extends BaseActivity implements View.OnClickListener
 
         Button btn_NFC = findViewById(R.id.btn_NFC);
         btn_NFC.setOnClickListener(this);
+
+        Button btn_NFCA = findViewById(R.id.btn_NFCA);
+        btn_NFCA.setOnClickListener(this);
 
         Button button = findViewById(R.id.btn_http);
         button.setOnClickListener(this);
@@ -149,6 +153,10 @@ public class SecondActivity extends BaseActivity implements View.OnClickListener
             case R.id.btn_PictureUpLoad:
                 Intent btn_PictureUpLoad =new Intent(SecondActivity.this,PictureUpload.class);
                 startActivity(btn_PictureUpLoad);
+                break;
+            case R.id.btn_NFCA:
+                Intent btn_NFCA =new Intent(SecondActivity.this,UUIDActivity.class);
+                startActivity(btn_NFCA);
                 break;
             case R.id.btn_NFC:
                 Intent btn_NFC =new Intent(SecondActivity.this,NFCActivity.class);

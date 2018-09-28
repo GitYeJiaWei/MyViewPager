@@ -14,9 +14,4 @@
         android:id="@+id/TextView"
         />
 
-    <Button
-        android:id="@+id/btn_uuid"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="读卡唯一号"/>
 </LinearLayout>

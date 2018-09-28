@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.yjw.common.BaseActivity;
 import com.example.yjw.myviewpager.R;
 
 import java.io.IOException;
@@ -25,11 +26,9 @@ import butterknife.OnClick;
 /**
  * NFC-V 的读取demo，ISO 15693-1
  */
-public class NFCActivity extends AppCompatActivity {
+public class NFCActivity extends BaseActivity {
     @BindView(R.id.TextView)
     TextView TextView;
-    @BindView(R.id.btn_uuid)
-    Button btnUuid;
     private NfcAdapter mAdapter;
     private PendingIntent mPendingIntent;
     private IntentFilter[] mFilters;
@@ -161,10 +160,4 @@ public class NFCActivity extends AppCompatActivity {
         super.onDestroy();
     }
 
-
-    @OnClick(R.id.btn_uuid)
-    public void onViewClicked() {
-        Intent btn_uuid = new Intent(this,UUIDActivity.class);
-        startActivityForResult(btn_uuid,1);
-    }
 }

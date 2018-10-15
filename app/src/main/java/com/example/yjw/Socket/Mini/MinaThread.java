@@ -49,17 +49,12 @@ public class MinaThread extends Thread{
                         Log.d(TAG,((InetSocketAddress) connector.getDefaultRemoteAddress()).getAddress()
                                 .getHostAddress());
                         ConnectFuture future = connector.connect();
-                        Log.d(TAG,"断线2");
                         future.awaitUninterruptibly();// 等待连接创建完成
-                         Log.d(TAG,"断线3");
                         session = future.getSession();// 获得session
-                         Log.d(TAG,"断线4");
                         if (session != null && session.isConnected()) {
-                             Log.d(TAG,"断线5");
                              Log.d(TAG,"断线重连["
                                     + ((InetSocketAddress) session.getRemoteAddress()).getAddress().getHostAddress()
                                     + ":" + ((InetSocketAddress) session.getRemoteAddress()).getPort() + "]成功");
-                            session.write("start");
                             break;
                         } else {
                              Log.d(TAG,"断线重连失败---->" + failCount + "次");
@@ -86,7 +81,7 @@ public class MinaThread extends Thread{
         }
         if (session != null && session.isConnected()) {
             session.getCloseFuture().awaitUninterruptibly();// 等待连接断开
-             Log.d(TAG,"客户端断开111111...");
+             Log.d(TAG,"客户端断开...");
             // connector.dispose();//彻底释放Session,退出程序时调用不需要重连的可以调用这句话，也就是短连接不需要重连。长连接不要调用这句话，注释掉就OK。
         }
 

@@ -1,5 +1,6 @@
 package com.example.yjw.Fragment.frag1;
 
+import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
@@ -37,7 +38,6 @@ public class FragmentActivity extends BaseActivity implements View.OnClickListen
 	/*
 	 * 初始化view的视图
 	 */
-
     private void initview() {
         //创建bundle对象  将需要传递的数据存储到bundle中
         //然后调用fragment的setAraguments()方法传递bundle
@@ -87,7 +87,36 @@ public class FragmentActivity extends BaseActivity implements View.OnClickListen
             default:
                 break;
         }
-        transaction.commit();
+        transaction.commitAllowingStateLoss();
+    }
+
+
+    private Fragment currentFragment;
+    /**
+     * 添加或者显示碎片
+     * 每次只显示一个
+     *
+     * @param transaction
+     * @param fragment
+     */
+    private void addOrShowFragment(FragmentTransaction transaction, Fragment fragment) {
+        if (currentFragment == fragment)
+            return;
+        if (!fragment.isAdded()) { // 如果当前fragment未被添加，则添加到Fragment管理器中
+            if(currentFragment == null)
+            {
+                transaction.add(R.id.content, fragment).commitAllowingStateLoss();
+            }
+            else
+            {
+                //transaction.hide(currentFragment).add(R.id.content_layout, fragment).commit();//不重新加载
+                transaction.remove(currentFragment).add(R.id.content, fragment).commitAllowingStateLoss();
+            }
+        } else {
+            //transaction.hide(currentFragment).show(fragment).commit();//不重新加载
+            transaction.remove(currentFragment).show(fragment).commitAllowingStateLoss();
+        }
+        currentFragment = fragment;
     }
 
 }

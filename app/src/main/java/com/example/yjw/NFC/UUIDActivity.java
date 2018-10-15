@@ -12,13 +12,13 @@ import android.nfc.tech.MifareClassic;
 import android.nfc.tech.MifareUltralight;
 import android.nfc.tech.NfcA;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
 import com.example.yjw.NFC.mifare.StringUtils;
-import com.example.yjw.myviewpager.BaseActivity;
 import com.example.yjw.myviewpager.R;
 
 import java.util.ArrayList;
@@ -27,9 +27,9 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
- * 除去NFC-V 以外的所有NFC卡片读取
+ * NFC-A,B  NFC卡片读取
  */
-public class UUIDActivity extends BaseActivity {
+public class UUIDActivity extends AppCompatActivity {
     @BindView(R.id.listview)
     ListView listview;
     private Intent mIntent = null;
@@ -45,7 +45,7 @@ public class UUIDActivity extends BaseActivity {
         setContentView(R.layout.activity_uuid);
         ButterKnife.bind(this);
 
-        //获取到NfcAdapter的实例
+        //获取默认的NFC控制器，并进行判断
         nfcAdapter = NfcAdapter.getDefaultAdapter(this);
         if (nfcAdapter == null) {
             Log.d("h_bl", "No support NFC！");
@@ -65,8 +65,8 @@ public class UUIDActivity extends BaseActivity {
 
 
         //intent匹配NfcAdapter的活动
+        // 前台activity过滤获得所有的ACTION_TECH_DISCOVERED的intent
         IntentFilter ndef = new IntentFilter(NfcAdapter.ACTION_TECH_DISCOVERED);
-
         try {
             ndef.addDataType("*/*");
         } catch (IntentFilter.MalformedMimeTypeException e) {
@@ -75,6 +75,7 @@ public class UUIDActivity extends BaseActivity {
         mFilters = new IntentFilter[]{ndef};
 
         //设置IsoDep,MifareClassic,MifareUltralight
+        // 声明前台activity能处理的NFC标签技术的数组
         mTechLists = new String[][]{new String[]{IsoDep.class.getName()},
                 new String[]{MifareUltralight.class.getName()}, new String[]{MifareClassic.class.getName()}};
 

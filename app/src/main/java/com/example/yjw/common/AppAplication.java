@@ -3,6 +3,8 @@ package com.example.yjw.common;
 import android.app.Application;
 import android.content.Context;
 
+import cn.jpush.android.api.JPushInterface;
+
 
 public class AppAplication extends Application {
 
@@ -16,6 +18,11 @@ public class AppAplication extends Application {
         CrashHandler crashHandler = CrashHandler.getInstance();
         // 注册crashHandler,//初始化全局异常管理
         crashHandler.init(getApplicationContext());
+        JPushInterface.setDebugMode(true);
+        JPushInterface.init(this);
+        //获取设备，设置别名
+        String name =DeviceUtils.getAndroidID(this);
+        JPushInterface.setAlias(this,0, name);
     }
 
     public static Context getMcontext(){

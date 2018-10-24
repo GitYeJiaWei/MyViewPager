@@ -48,8 +48,7 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        JPushInterface.setDebugMode(true);
-        JPushInterface.init(this);
+
 
         ActionBar actionBar = getSupportActionBar();
         if (actionBar !=null){

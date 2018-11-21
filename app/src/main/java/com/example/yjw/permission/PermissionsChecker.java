@@ -5,9 +5,6 @@ import android.content.Context;
 import android.content.pm.PackageManager;
 import android.support.v4.content.ContextCompat;
 
-/**
- * Created by kimhillzhang on 2018-01-31.
- */
 
 public class PermissionsChecker {
     private final Context mContext;
@@ -21,7 +18,6 @@ public class PermissionsChecker {
             Manifest.permission.INTERNET,
             Manifest.permission.ACCESS_FINE_LOCATION,
             Manifest.permission.WRITE_EXTERNAL_STORAGE
-
     };
 
     public PermissionsChecker(Context context) {

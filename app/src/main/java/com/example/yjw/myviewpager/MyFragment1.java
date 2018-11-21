@@ -65,7 +65,6 @@ public class MyFragment1 extends Fragment implements View.OnClickListener{
         switch (v.getId()){
             case R.id.btn_intent:
                 //Intent intent = new Intent(getActivity(),FirstActivity.class);
-                int a = Integer.valueOf("p");
                 String data ="hello";
                 Intent intent =new Intent("android.intent.action.FistActivity");
                 intent.addCategory("com.example.FistActivity");

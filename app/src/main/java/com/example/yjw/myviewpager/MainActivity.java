@@ -48,11 +48,9 @@ public class MainActivity extends BaseActivity implements RadioGroup.OnCheckedCh
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-
         ActionBar actionBar = getSupportActionBar();
         if (actionBar !=null){
-            actionBar.hide();;
+            actionBar.hide();
         }
 
         mAdapter = new MyFragmentPagerAdapter(getSupportFragmentManager());

@@ -66,6 +66,7 @@ public class FragmentActivity extends BaseActivity implements View.OnClickListen
         switch (v.getId()) {
             case R.id.rb_shopshop:
                 ShopFragment shopFragment=new ShopFragment();
+                //如果transaction  commit（）过  那么我们要重新得到transaction
                 shopFragment.setArguments(bundle);
                 transaction.replace(R.id.content_layout, shopFragment);
                 break;

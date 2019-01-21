@@ -60,12 +60,10 @@
                 <category android:name="android.intent.category.default" />
             </intent-filter>
         </service>
-
         <service
             android:name="com.example.yjw.service.MyService"
             android:enabled="true"
             android:exported="true" />
-
         <service
             android:name="com.example.yjw.KillProsser.AutoCleanService"
             android:enabled="true"
@@ -249,9 +247,6 @@
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden" />
-
-
-
         <activity
             android:name="com.example.yjw.BaiduLBS.Baidu_MainActivity"
             android:configChanges="orientation|keyboardHidden"
@@ -480,7 +475,8 @@
         <activity android:name="com.example.yjw.NFC.NFCActivity" />
         <activity android:name="com.example.yjw.NFC.UUIDActivity" />
         <activity android:name="com.example.yjw.photoupload.PictureUpload" />
-        <activity android:name="com.example.yjw.photoupload.photoupload2.PictureUpload2"></activity>
+        <activity android:name="com.example.yjw.photoupload.photoupload2.PictureUpload2" />
+        <activity android:name="com.example.yjw.MakeView.MakeView"></activity>
     </application>
 
 </manifest>

@@ -73,7 +73,7 @@
                 android:layout_marginTop="15dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="自定义对话框1"
+                android:text="对话框1"
                 android:background="@color/colorAccent"/>
 
             <Button
@@ -81,7 +81,15 @@
                 android:layout_marginTop="15dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="自定义对话框2"
+                android:text="对话框2"
+                android:background="@color/colorAccent"/>
+
+            <Button
+                android:id="@+id/btn_dialog3"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="自定义对话框"
                 android:background="@color/colorAccent"/>
 
 

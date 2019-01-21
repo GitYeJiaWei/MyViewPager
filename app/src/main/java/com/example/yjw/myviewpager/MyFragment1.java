@@ -12,11 +12,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.example.yjw.Fragment.frag1.FragmentActivity;
 import com.example.yjw.Fragment.frag2.Fragment1Activity;
+import com.example.yjw.common.ScreenUtils;
 import com.example.yjw.intent.OneActivity;
 
 import static android.app.Activity.RESULT_OK;
@@ -39,8 +41,10 @@ public class MyFragment1 extends Fragment implements View.OnClickListener{
         textView.setText("第一个Fragment");
 
         progressBar = view.findViewById(R.id.progressBar);
+
         Button button4 =view.findViewById(R.id.btn_dialog1);
         Button button5 =view.findViewById(R.id.btn_dialog2);
+        Button btn_dialog3 =view.findViewById(R.id.btn_dialog3);
         Button button = view.findViewById(R.id.btn_intent);
         Button button2 = view.findViewById(R.id.btn_intent1);
         Button button1 = view.findViewById(R.id.btn_url);
@@ -57,6 +61,7 @@ public class MyFragment1 extends Fragment implements View.OnClickListener{
         button6.setOnClickListener(this);
         btn_serializable.setOnClickListener(this);
         btn_frag1.setOnClickListener(this);
+        btn_dialog3.setOnClickListener(this);
         return view;
     }
 
@@ -130,9 +135,41 @@ public class MyFragment1 extends Fragment implements View.OnClickListener{
                 Intent btn_frag1 =new Intent(getActivity(), Fragment1Activity.class);
                 startActivityForResult(btn_frag1,1);
                 break;
+            case R.id.btn_dialog3:
+                showDialog();
+                break;
             default:
                 break;
         }
+    }
+
+    //初始化并弹出对话框方法
+    private void showDialog(){
+        View view = LayoutInflater.from(getActivity()).inflate(R.layout.cw_location_dialog_dong,null,false);
+        final AlertDialog dialog = new AlertDialog.Builder(getContext()).setView(view).create();
+
+        Button btn_cancel = (Button) view.findViewById(R.id.btn_cancel);
+        Button btn_agree = (Button) view.findViewById(R.id.btn_agree);
+
+        btn_cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //... To-do
+                dialog.dismiss();
+            }
+        });
+
+        btn_agree.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //... To-do
+                dialog.dismiss();
+            }
+        });
+
+        dialog.show();
+        //此处设置位置窗体大小，我这里设置为了手机屏幕宽度的3/4
+        dialog.getWindow().setLayout((ScreenUtils.getScreenWidth(getContext())/4*3), LinearLayout.LayoutParams.WRAP_CONTENT);
     }
 
     @Override

@@ -26,6 +26,7 @@ import com.example.yjw.Interface.MyInterfaceActivity;
 import com.example.yjw.JsonObject.JsonActivity;
 import com.example.yjw.MPAndroidChart.CombinedChart.CombinedActivity;
 import com.example.yjw.MPAndroidChart.MAPAndroidChart;
+import com.example.yjw.MakeView.MakeView;
 import com.example.yjw.MaterialDesign.DrawerLayoutActivity;
 import com.example.yjw.OnRefreshList.OnRefreshActivity;
 import com.example.yjw.OnTouchEvent.OnTouchEvent;
@@ -155,6 +156,8 @@ public class FirstActivity extends BaseActivity {
     Button tvSocket2Activity;
     @BindView(R.id.tv_MinaActivity)
     Button tvMinaActivity;
+    @BindView(R.id.tv_MakeView)
+    Button tvMakeView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -187,9 +190,13 @@ public class FirstActivity extends BaseActivity {
         }
     }
 
-    @OnClick({R.id.tv_MinaActivity,R.id.tv_Socket2Activity, R.id.tv_SocketActivity, R.id.tv_HandlerThreadActivity, R.id.btn_AsyncTask, R.id.btn_Glide, R.id.btn_ClotheStore, R.id.btn_Queue, R.id.btn_ThreadPool, R.id.btn_JsonActivity, R.id.btn_OnTouchEvent, R.id.btn_OnRefreshActivity, R.id.btn_WViewActivity, R.id.btn_AddViewActivity, R.id.btn_Main2Activity, R.id.btn_MessageActivity, R.id.btn_ViewPageActivity, R.id.btn_CombinedActivity, R.id.btn_PreisterActivity, R.id.btn_MAPAndroidChar, R.id.btn_Retrofit, R.id.btn_BaseDialog, R.id.btn_BaseMaterial, R.id.btn_http, R.id.btn_pictureup, R.id.btn_chose, R.id.btn_webview, R.id.btn_okhttp, R.id.btn_back, R.id.btn_frame, R.id.btn_broadcast, R.id.btn_mybroadcast, R.id.btn_mybroadlocalcast, R.id.btn_tiao, R.id.btn_yipin, R.id.btn_shipin, R.id.btn_handler, R.id.btn_myservice, R.id.btn_Drawerlayout, R.id.btn_BackLogin, R.id.BaiduTTS, R.id.BaiduTTS1, R.id.Zxing, R.id.DatePickerDialog, R.id.MyInterface, R.id.HorizontalScrollViewActivity, R.id.Dagger, R.id.btn_ACache})
+    @OnClick({R.id.tv_MakeView,R.id.tv_MinaActivity, R.id.tv_Socket2Activity, R.id.tv_SocketActivity, R.id.tv_HandlerThreadActivity, R.id.btn_AsyncTask, R.id.btn_Glide, R.id.btn_ClotheStore, R.id.btn_Queue, R.id.btn_ThreadPool, R.id.btn_JsonActivity, R.id.btn_OnTouchEvent, R.id.btn_OnRefreshActivity, R.id.btn_WViewActivity, R.id.btn_AddViewActivity, R.id.btn_Main2Activity, R.id.btn_MessageActivity, R.id.btn_ViewPageActivity, R.id.btn_CombinedActivity, R.id.btn_PreisterActivity, R.id.btn_MAPAndroidChar, R.id.btn_Retrofit, R.id.btn_BaseDialog, R.id.btn_BaseMaterial, R.id.btn_http, R.id.btn_pictureup, R.id.btn_chose, R.id.btn_webview, R.id.btn_okhttp, R.id.btn_back, R.id.btn_frame, R.id.btn_broadcast, R.id.btn_mybroadcast, R.id.btn_mybroadlocalcast, R.id.btn_tiao, R.id.btn_yipin, R.id.btn_shipin, R.id.btn_handler, R.id.btn_myservice, R.id.btn_Drawerlayout, R.id.btn_BackLogin, R.id.BaiduTTS, R.id.BaiduTTS1, R.id.Zxing, R.id.DatePickerDialog, R.id.MyInterface, R.id.HorizontalScrollViewActivity, R.id.Dagger, R.id.btn_ACache})
     public void onViewClicked(View view) {
         switch (view.getId()) {
+            case R.id.tv_MakeView:
+                Intent tv_MakeView = new Intent(this, MakeView.class);
+                startActivityForResult(tv_MakeView, RAG);
+                break;
             case R.id.tv_MinaActivity:
                 Intent tv_MinaActivity = new Intent(this, MinaActivity.class);
                 startActivityForResult(tv_MinaActivity, RAG);

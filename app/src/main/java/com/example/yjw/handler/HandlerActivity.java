@@ -1,6 +1,7 @@
 package com.example.yjw.handler;
 
 import android.os.Handler;
+import android.os.Looper;
 import android.os.Message;
 import android.os.Bundle;
 import android.view.View;
@@ -25,7 +26,7 @@ public class HandlerActivity extends BaseActivity implements View.OnClickListene
         change_text.setOnClickListener(this);
     }
 
-    private Handler handler =new Handler(){
+    private Handler handler =new Handler(Looper.getMainLooper()){
         @Override
         public void handleMessage(Message msg) {
             switch (msg.what){
@@ -49,6 +50,7 @@ public class HandlerActivity extends BaseActivity implements View.OnClickListene
                     public void run() {
                         Message message=new Message();
                         message.what = UPDATE_TEXT;
+                        message.obj = "asdf";
                         handler.sendMessage(message);//将message对象发出去
                     }
                 }).start();

@@ -184,7 +184,7 @@ public class CrashHandler implements Thread.UncaughtExceptionHandler {
         try {
             long timeamp =System.currentTimeMillis();
             String time =format.format(new Date());
-            String fileName = "crash-" + time + "-" + timeamp + ".log";
+            String fileName = "crash-" + time + ".txt";
             if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
                 String path = Environment.getExternalStorageDirectory().getAbsolutePath() + "/crash/";
                 File dir = new File(path);

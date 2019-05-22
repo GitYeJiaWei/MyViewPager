@@ -37,4 +37,6 @@
     <string name="cloth_shibiet">Automatic identification of goods, please later</string>
     <string name="cloth_yaodong">请摇动商品</string>
     <string name="cloth_bumai">不买的商品请放回原位  Please put the goods you do not buy back in place</string>
+    <string name="title_item_list">Items</string>
+    <string name="title_item_detail">Item Detail</string>
 </resources>

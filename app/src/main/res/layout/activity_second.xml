@@ -23,6 +23,54 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_ObjectAnimator"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跳到属性动画Object"
+                android:background="@color/colorAccent"/>
+
+            <Button
+                android:id="@+id/btn_ValueAnimator"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跳到属性动画Value"
+                android:background="@color/colorAccent"/>
+
+            <Button
+                android:id="@+id/btn_Canvas"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跳到Canvas画图"
+                android:background="@color/colorAccent"/>
+
+            <Button
+                android:id="@+id/btn_MvpActivity"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跳到MVP模式登录"
+                android:background="@color/colorAccent"/>
+            <Button
+                android:id="@+id/btn_LeakCanary"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跳到内存泄露"
+                android:background="@color/colorAccent"/>
+
+            <Button
+                android:id="@+id/btn_GreenDAO"
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跳到GreenDAO数据库"
+                android:background="@color/colorAccent"/>
+
             <Button
                 android:id="@+id/btn_PictureUpLoad2"
                 android:layout_marginTop="15dp"

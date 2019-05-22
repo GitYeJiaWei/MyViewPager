@@ -23,13 +23,15 @@ public class DrawerLayoutActivity extends BaseActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Snackbar.make(v,"123456",Snackbar.LENGTH_LONG)
+                /*Snackbar.make(v,"123456",Snackbar.LENGTH_LONG)
                         .setAction("不是", new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
                                 Toast.makeText(DrawerLayoutActivity.this,"你就是大傻逼",Toast.LENGTH_SHORT).show();
                             }
-                        }).show();
+                        }).show();*/
+                Toast.makeText(DrawerLayoutActivity.this,"你就是大傻逼",Toast.LENGTH_SHORT).show();
+
             }
         });
 

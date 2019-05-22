@@ -2,11 +2,13 @@ package com.example.yjw.Retrofit;
 
 import java.util.Map;
 
+import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FieldMap;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
+import retrofit2.http.Headers;
 import retrofit2.http.POST;
 import retrofit2.http.Query;
 import retrofit2.http.QueryMap;
@@ -36,9 +38,13 @@ public interface APIservice {
    // https://www.zftong.cn/tools/android.ashx?committype=login&sjh=18859863913&pwd=321
    @FormUrlEncoded
    @POST("/tools/android.ashx")
-   Observable<QQDataT> QQ_DATA_CALL3(@Field("committype") String login,@Field("sjh") String Sjh,@Field("pwd") String pword);
+   Observable<ResponseBody> QQ_DATA_CALL3(@Field("committype") String login,@Field("sjh") String Sjh,@Field("pwd") String pword);
 
-    //http://localhost:8081/Json?name=admin&password=123
-    @GET("/Json")
-    Observable<Json> JSON(@QueryMap Map<String,String> params);
+    String BASE_URL = "http://192.168.66.3:8112/token/";
+
+    //http://192.168.66.3:8107/api/user/Login?userName=admin&password=123
+    @FormUrlEncoded
+    @Headers("Content-Type:application/x-www-form-urlencoded; charset=utf-8")
+    @POST("/api/User/ChangePassword")//登录
+    Observable<ResponseBody> JSON(@FieldMap Map<String ,String> params);
 }

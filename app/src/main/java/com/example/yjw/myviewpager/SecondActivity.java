@@ -1,6 +1,8 @@
 package com.example.yjw.myviewpager;
 
 import android.Manifest;
+import android.animation.ObjectAnimator;
+import android.animation.ValueAnimator;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -13,9 +15,15 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.yjw.Animation.ObjectAnimatorDemo;
+import com.example.yjw.Animation.ValueAnimatorDemo;
 import com.example.yjw.BaiduLBS.Baidu_MainActivity;
 import com.example.yjw.BaseListView.MyListView;
+import com.example.yjw.Canvas.CanvasActivity;
 import com.example.yjw.CityList.Select_City_Activity;
+import com.example.yjw.GreenDAO.GreenDaoActivity;
+import com.example.yjw.LeakCanary.LeakCanaryActivity;
+import com.example.yjw.MVP.MvpActivity;
 import com.example.yjw.NFC.NFCActivity;
 import com.example.yjw.NFC.UUIDActivity;
 import com.example.yjw.StaggeredGridLagout.StaggeredGridLayoutActivity;
@@ -24,7 +32,6 @@ import com.example.yjw.common.ActivityCollecter;
 import com.example.yjw.common.BaseActivity;
 import com.example.yjw.contentResolver.ContentActivity;
 import com.example.yjw.contentResolver.ContentResolverActivity;
-import com.example.yjw.listview.ListViewActivity;
 import com.example.yjw.notification.NotificationActivity;
 import com.example.yjw.photoupload.PictureUpload;
 import com.example.yjw.photoupload.photoupload2.PictureUpload2;
@@ -51,6 +58,24 @@ public class SecondActivity extends BaseActivity implements View.OnClickListener
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
         dbHelper = new MyDatabaseHelper(this, "BookStore.db", null, 1);
+
+        Button btn_ObjectAnimator = findViewById(R.id.btn_ObjectAnimator);
+        btn_ObjectAnimator.setOnClickListener(this);
+
+        Button btn_ValueAnimator = findViewById(R.id.btn_ValueAnimator);
+        btn_ValueAnimator.setOnClickListener(this);
+
+        Button btn_Canvas = findViewById(R.id.btn_Canvas);
+        btn_Canvas.setOnClickListener(this);
+
+        Button btn_MvpActivity = findViewById(R.id.btn_MvpActivity);
+        btn_MvpActivity.setOnClickListener(this);
+
+        Button btn_LeakCanary = findViewById(R.id.btn_LeakCanary);
+        btn_LeakCanary.setOnClickListener(this);
+
+        Button btn_GreenDAO = findViewById(R.id.btn_GreenDAO);
+        btn_GreenDAO.setOnClickListener(this);
 
         Button btn_PictureUpLoad = findViewById(R.id.btn_PictureUpLoad);
         btn_PictureUpLoad.setOnClickListener(this);
@@ -146,6 +171,30 @@ public class SecondActivity extends BaseActivity implements View.OnClickListener
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
+            case R.id.btn_ObjectAnimator:
+                Intent btn_ObjectAnimator =new Intent(SecondActivity.this,ObjectAnimatorDemo.class);
+                startActivity(btn_ObjectAnimator);
+                break;
+            case R.id.btn_ValueAnimator:
+                Intent btn_ValueAnimator =new Intent(SecondActivity.this,ValueAnimatorDemo.class);
+                startActivity(btn_ValueAnimator);
+                break;
+            case R.id.btn_Canvas:
+                Intent btn_Canvas =new Intent(SecondActivity.this,CanvasActivity.class);
+                startActivity(btn_Canvas);
+                break;
+            case R.id.btn_MvpActivity:
+                Intent btn_MvpActivity =new Intent(SecondActivity.this,MvpActivity.class);
+                startActivity(btn_MvpActivity);
+                break;
+            case R.id.btn_LeakCanary:
+                Intent btn_LeakCanary =new Intent(SecondActivity.this,LeakCanaryActivity.class);
+                startActivity(btn_LeakCanary);
+                break;
+            case R.id.btn_GreenDAO:
+                Intent btn_GreenDAO =new Intent(SecondActivity.this,GreenDaoActivity.class);
+                startActivity(btn_GreenDAO);
+                break;
             case R.id.btn_PictureUpLoad2:
                 Intent btn_PictureUpLoad2 =new Intent(SecondActivity.this,PictureUpload2.class);
                 startActivity(btn_PictureUpLoad2);

@@ -6,9 +6,12 @@ import com.example.yjw.common.BaseActivity;
 import com.example.yjw.common.DialogUtils;
 import com.example.yjw.myviewpager.R;
 
+import java.io.IOException;
 import java.util.HashMap;
+import java.util.Objects;
 
 import okhttp3.OkHttpClient;
+import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -37,13 +40,14 @@ public class DataServiceActivity extends BaseActivity {
 
     private  void initview4(){
         //http://localhost:8081/Json?name=admin&password=123
-        HashMap<String,String> map =new HashMap<>();
-        map.put("name","admin");
-        map.put("password","123");
+        HashMap<String,String> params =new HashMap<>();
+        params.put("oldPwd","123");
+        params.put("newPwd","1234");
+        params.put("confirmPwd","123");
 
         Retrofit retrofit =new Retrofit.Builder()
                 //设置基础的URL
-                .baseUrl("http://192.168.31.112:8081/")
+                .baseUrl("http://192.168.66.3:8112/")
                 //设置内容格式,这种对应的数据返回值是Gson类型，需要导包
                 .addConverterFactory(GsonConverterFactory.create())
                 //设置支持RxJava，应用observable观察者，需要导包
@@ -52,11 +56,11 @@ public class DataServiceActivity extends BaseActivity {
                 .build();
 
         APIservice apIservice =retrofit.create(APIservice.class);
-        Observable<Json> json = apIservice.JSON(map);
+        Observable<ResponseBody> json = apIservice.JSON(params);
 
         json.subscribeOn(Schedulers.io())//请求数据的事件发生在io线程
             .observeOn(AndroidSchedulers.mainThread())//请求完成后在主线程更新UI
-            .subscribe(new Observer<Json>() {
+            .subscribe(new Observer<ResponseBody>() {
                 @Override
                 public void onCompleted() {
                 }
@@ -67,9 +71,14 @@ public class DataServiceActivity extends BaseActivity {
                 }
 
                 @Override
-                public void onNext(Json s) {
-                    DialogUtils.ShowToast(DataServiceActivity.this,"key:"+s.getKey()+"Code:"+s.getCode());
+                public void onNext(ResponseBody responseBody) {
+                    try {
+                        responseBody.string();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
                 }
+
             });
     }
 
@@ -112,10 +121,10 @@ public class DataServiceActivity extends BaseActivity {
 
         APIservice apIservice =retrofit.create(APIservice.class);
 
-        Observable<QQDataT> qqDataCall =apIservice.QQ_DATA_CALL3("login","18859863913","321");
+        Observable<ResponseBody> qqDataCall =apIservice.QQ_DATA_CALL3("login","18859863913","321");
         qqDataCall.subscribeOn(Schedulers.io())//请求数据的事件发生在io线程
                 .observeOn(AndroidSchedulers.mainThread())//请求完成后在主线程更新UI
-                .subscribe(new Observer<QQDataT>() {//订阅
+                .subscribe(new Observer<ResponseBody>() {//订阅
                                @Override
                                public void onCompleted() {
                                    //所有事件都完成，可以做些操作。。。
@@ -125,8 +134,12 @@ public class DataServiceActivity extends BaseActivity {
                                    e.printStackTrace(); //请求过程中发生错误
                                }
                                @Override
-                               public void onNext(QQDataT book) {//这里的book就是我们请求接口返回的实体类
-                                   DialogUtils.ShowToast(DataServiceActivity.this,book.getDwdz());
+                               public void onNext(ResponseBody book) {//这里的book就是我们请求接口返回的实体类
+                                   try {
+                                       book.string();
+                                   } catch (IOException e) {
+                                       e.printStackTrace();
+                                   }
                                }
                            }
 

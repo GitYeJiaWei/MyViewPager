@@ -1,7 +1,6 @@
 <resources>
 
-    <style name="AppBaseTheme" parent="AppTheme">
-    </style>
+    <style name="AppBaseTheme" parent="AppTheme"></style>
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
@@ -30,7 +29,7 @@
     </style>
 
     <style name="AppTheme.Notitle.FullScreen" parent="AppTheme.Notitle">
-    <item name="android:windowFullscreen">true</item>
+        <item name="android:windowFullscreen">true</item>
     </style>
 
     <style name="AppTheme.Notitle" parent="AppTheme">
@@ -38,8 +37,7 @@
         <item name="windowActionBar">false</item>
     </style>
 
-    <style
-        name="loading_dialog" parent="@android:style/Theme.Dialog">
+    <style name="loading_dialog" parent="@android:style/Theme.Dialog">
         <!-- 边框 -->
         <item name="android:windowFrame">@null</item>
         <!-- 是否浮现在activity之上 -->
@@ -56,6 +54,10 @@
         <!-- 遮罩层 -->
         <item name="android:backgroundDimAmount">0.6</item>
     </style>
+
+    <style name="AppBaseTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppBaseTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 
 </resources>

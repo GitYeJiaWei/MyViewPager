@@ -1,4 +1,4 @@
-package com.example.yjw.Socket.Mini;
+package com.example.yjw.Socket.Mina;
 
 import android.util.Log;
 
@@ -14,20 +14,20 @@ public class MinaClientHandler extends IoHandlerAdapter {
     @Override
     public void sessionOpened(IoSession session) throws Exception {
         super.sessionOpened(session);
-        Log.i("Socket", "向服务端发送数据"+value);
+        Log.i("Socket1", "向服务端发送数据"+value);
         //session.write(value);
     }
 
     @Override
     public void exceptionCaught(IoSession session, Throwable cause) throws Exception {
-        Log.i("Socket", "客户端链接发生异常");
+        Log.i("Socket1", "客户端链接发生异常");
         super.exceptionCaught(session, cause);
     }
 
     @Override
     public void messageReceived(IoSession session, Object message) throws Exception {
         String msg = message.toString();
-        Log.i("Socket", "i客户端接收到的信息为:" + msg);
+        Log.i("Socket1", "i客户端接收到的信息为:" + msg);
         super.messageReceived(session, message);
     }
 

@@ -25,8 +25,8 @@ public class Socket2Activity extends AppCompatActivity implements Runnable{
     private TextView tv_msg = null;
     private EditText ed_msg = null;
     private Button btn_send = null;
-    private static final String HOST = "192.168.31.128";//服务器地址
-    private static final int PORT = 8888;//连接端口号
+    private static final String HOST = "192.168.0.204";//服务器地址
+    private static final int PORT = 4442;//连接端口号
     private Socket socket = null;
     private BufferedReader in = null;
     private PrintWriter out = null;

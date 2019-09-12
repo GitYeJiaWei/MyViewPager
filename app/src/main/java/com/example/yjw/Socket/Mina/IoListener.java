@@ -1,4 +1,4 @@
-package com.example.yjw.Socket.Mini;
+package com.example.yjw.Socket.Mina;
 
 import org.apache.mina.core.service.IoService;
 import org.apache.mina.core.service.IoServiceListener;

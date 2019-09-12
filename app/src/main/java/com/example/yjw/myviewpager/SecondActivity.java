@@ -21,6 +21,7 @@ import com.example.yjw.BaiduLBS.Baidu_MainActivity;
 import com.example.yjw.BaseListView.MyListView;
 import com.example.yjw.Canvas.CanvasActivity;
 import com.example.yjw.CityList.Select_City_Activity;
+import com.example.yjw.DialogFragment.MyDialogActivity;
 import com.example.yjw.GreenDAO.GreenDaoActivity;
 import com.example.yjw.LeakCanary.LeakCanaryActivity;
 import com.example.yjw.MVP.MvpActivity;
@@ -58,6 +59,9 @@ public class SecondActivity extends BaseActivity implements View.OnClickListener
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
         dbHelper = new MyDatabaseHelper(this, "BookStore.db", null, 1);
+
+        Button btn_myDialogFragment = findViewById(R.id.btn_myDialogFragment);
+        btn_myDialogFragment.setOnClickListener(this);
 
         Button btn_ObjectAnimator = findViewById(R.id.btn_ObjectAnimator);
         btn_ObjectAnimator.setOnClickListener(this);
@@ -171,6 +175,10 @@ public class SecondActivity extends BaseActivity implements View.OnClickListener
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
+            case R.id.btn_myDialogFragment:
+                Intent btn_myDialogFragment =new Intent(SecondActivity.this, MyDialogActivity.class);
+                startActivity(btn_myDialogFragment);
+                break;
             case R.id.btn_ObjectAnimator:
                 Intent btn_ObjectAnimator =new Intent(SecondActivity.this,ObjectAnimatorDemo.class);
                 startActivity(btn_ObjectAnimator);

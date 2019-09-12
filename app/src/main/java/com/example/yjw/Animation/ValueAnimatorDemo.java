@@ -29,8 +29,8 @@ public class ValueAnimatorDemo extends BaseActivity {
         setContentView(R.layout.activity_value_animator);
 
         //initView();
-        initView2();
         //initView1();
+        //initView2();
     }
 
     private void initView(){
@@ -60,4 +60,5 @@ public class ValueAnimatorDemo extends BaseActivity {
         });
         animator.start();
     }
+
 }

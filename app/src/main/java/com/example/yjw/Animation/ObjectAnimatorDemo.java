@@ -1,5 +1,8 @@
 package com.example.yjw.Animation;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
+import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.os.Bundle;
 import android.view.View;
@@ -41,7 +44,43 @@ public class ObjectAnimatorDemo extends BaseActivity {
     }
 
     private void initView() {
+        ObjectAnimator moveIn = ObjectAnimator.ofFloat(textView6,"translationX",-500f,0f);
+        ObjectAnimator rotate = ObjectAnimator.ofFloat(textView6, "rotation", 0f, 360f);
+        ObjectAnimator fadeInOut = ObjectAnimator.ofFloat(textView6, "alpha", 1f, 0f, 1f);
+        AnimatorSet animatorSet = new AnimatorSet();
+        animatorSet.play(rotate).with(fadeInOut).after(moveIn);
+        animatorSet.setDuration(500);
+        animatorSet.start();
+        //动画监听
+        animatorSet.addListener(new Animator.AnimatorListener() {
+            @Override
+            public void onAnimationStart(Animator animation) {
+                //onAnimationStart()方法会在动画开始的时候调用
+            }
 
+            @Override
+            public void onAnimationEnd(Animator animation) {
+                //onAnimationEnd()方法会在动画结束的时候调用
+            }
+
+            @Override
+            public void onAnimationCancel(Animator animation) {
+                //onAnimationCancel()方法会在动画被取消的时候调用
+            }
+
+            @Override
+            public void onAnimationRepeat(Animator animation) {
+                //onAnimationRepeat()方法会在动画重复执行的时候调用
+            }
+        });
+
+        //动画监听的适配器,重写你需要的方法
+        animatorSet.addListener(new AnimatorListenerAdapter() {
+            @Override
+            public void onAnimationEnd(Animator animation) {
+                super.onAnimationEnd(animation);
+            }
+        });
     }
 
     @OnClick({R.id.button2, R.id.button3, R.id.button1, R.id.button4,R.id.button5})
@@ -71,10 +110,19 @@ public class ObjectAnimatorDemo extends BaseActivity {
                 animator3.start();
                 break;
             case R.id.button5:
+                /**
+                 * after(Animator anim)   将现有动画插入到传入的动画之后执行
+                 * after(long delay)   将现有动画延迟指定毫秒后执行
+                 * before(Animator anim)   将现有动画插入到传入的动画之前执行
+                 * with(Animator anim)   将现有动画和传入的动画同时执行
+                 */
                 ObjectAnimator moveIn = ObjectAnimator.ofFloat(textView6,"translationX",-500f,0f);
                 ObjectAnimator rotate = ObjectAnimator.ofFloat(textView6, "rotation", 0f, 360f);
                 ObjectAnimator fadeInOut = ObjectAnimator.ofFloat(textView6, "alpha", 1f, 0f, 1f);
-
+                AnimatorSet animatorSet = new AnimatorSet();
+                animatorSet.play(rotate).with(fadeInOut).after(moveIn);
+                animatorSet.setDuration(500);
+                animatorSet.start();
                 break;
         }
 
